@@ -1,0 +1,117 @@
+O que é um container?
+
+- Mais leve
+- Não tem os custos de manter múltiplos Sistemas Operacionais
+- Mais rápido de subir
+
+Mas por que precisamos deles?
+
+Os problemas desta abordagem:
+- Dois apps utilizando a mesma porta de rede?
+- E se um app começar a consumir muito de um recurso, como a CPU?
+- E se cada app precisar de uma versão especifica de uma linguagem?
+
+Utilizando containers
+
+Ganhamos:
+- Melhor controle sobre o uso de cada recurso( CPU, Disco, Rede, etc...)
+- Agilidade na hora de criar ou remover um container
+- Maior facilidade na hora de trabalhar com diferentes versões de linguagens e bibliotecas
+- Mais leves que as VM
+
+O que é o Docker?
+
+Docker Inc.
+
+- dotCloud
+PaaS - Plataform as a Service => heroku, Microsoft Azure, Google Cloud Platform
+
+Como nasceu o Docker
+
+- amazon webservices
+
+Docker - A(s) tecnologias(s)
+
+- Tecnologias de containers para prover ferramentas modernas para deployar e rodar aplicações.
+
+Docker Engine
+
+Outras tecnologias do Docker
+
+Docker Compose: Um jeito fácil de definir e orquestrar múltiplos container.
+
+Docker Swarm: Uma ferramenta para colocar múltiplos Dockers Host's para trabalharem junto em cluster
+
+Outras tecnologias do Docker
+
+Docker Hub: Um repositório com mais de 250 mil imagens diferentes para os seus containers.
+
+Docker Machine: Uma ferramenta que nos permite instalar e configurar em host virtuais.
+
+Comandos Docker
+
+Comando para criar um container
+- docker run hello-world
+
+Comando para listar todos containers ativos
+docker ps
+
+Comando para listar todos os containers que eu já criei e uma tabela com as informações do container
+docker ps -a
+
+Comando para executar alguma coisa dentro da imagem
+docker run ubuntu echo "Olá Mundo"
+
+Comando para atrelar o terminal do windows ao conteiner docker ubuntu
+docker run -it nome_do_container
+
+Comando para startar o container docker
+docker start CONTAINER ID
+
+Comando para parar o container docker
+docker stop CONTAINER ID
+
+Comando para startar o container docker e atrelar o terminal do windows ao ubuntu
+docker start -a -i CONTAINER ID
+
+Comando para remover um container
+docker rm CONTAINER ID
+
+Comando para limpar todos os containers inativos
+docker container prune
+
+Comando para mostrar as imagens
+docker images
+
+Comando para remover imagens no docker
+docker rmi REPOSITORY
+
+Comando para baixar uma imagem completa
+docker run ubuntu:14.04
+
+Comando para baixar uma imagem que foi criada por um usuario
+docker run dockersamples/static-site
+
+##################################################################################
+Os dois principais estados de um container
+
+Running => rodando => docker start inicia o container
+
+Stopped => Parado => docker stop encerra o container
+##################################################################################
+Layered Filesystem
+
+compartilhamento de camadas
+criando um container em cima de uma imagem que já existe
+os containers não permite a escrita, sendo assim cria varias layers fina para escrita e leitura
+##################################################################################
+Comandos linux - ubuntu
+
+Comando linux para criar um arquivo no ubuntu
+touch ola-mundo.txt
+
+Comando linux para escrever no arquivo criado no ubuntu
+echo "Teste do container" > ola-mundo.txt
+
+Comando linux para visualizar o que foi escriot no arquivo
+cat ola-mundo.txt
