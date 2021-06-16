@@ -1,2 +1,2 @@
-# curso_docker_alura
-Curso Docker Alura
+# curso_docker_completo
+Curso Docker do Básico ao Avançado
