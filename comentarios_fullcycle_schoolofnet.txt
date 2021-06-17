@@ -1,0 +1,61 @@
+#################################################################################################################################################################
+																	Apache Kafka
+#################################################################################################################################################################
+O que é o Apache Kafka?
+	- Plataforma distribuida de streaming.
+	- Trabalha de forma distribuida com os brokers para garantir resiliencia.
+	- De forma distribuida ele consegue processar uma grande quantidade de dados e entregá-los em tempo real aos seus consumidores.
+
+Caracteristicas do Apache Kafka
+	- Plataforma
+	- Trabalha de forma distribuida
+	- Banco de dados
+	- Extremamente rápido e com baixa latência
+	- Utiliza disco ao ínves de memoria para processar os dados
+	- Não é apenas um sistema tradicional de filas RabbitMQ
+
+#################################################################################################################################################################	
+																		Portainer
+#################################################################################################################################################################
+Portainer: Gerenciamento de containers Docker simples e visual
+
+#################################################################################################################################################################
+																		Docker
+#################################################################################################################################################################
+Docker e container Nginx => sobe uma aplicação Web, pois o Nginx é um servidor Web
+Container Docker => sobe baseado em uma imagem, portanto container é imutavel, processo morreu as informações não são persistidas 
+Volume em docker: permite compartilhamento de banco de dados em desenvolvimento
+
+Comandos básicos
+	- docker ps: mostra todos os containers rodando
+	- docker ps -a: mostra todos os containers	
+	- docker rm: permite remover todos os containers da aplicação
+	- docker rm nome_container ou id_container -f: permite remover o container de forma forçada
+	- docker rm $(docker ps -a -q) -f: remove todos os conatiners de uma vez só
+	- docker run hello-world: chama uma imagem hello-world e cria um container
+	- docker run -it ubuntu /bin/bash: permite interagir com a linha de comando do ubuntu
+	- docker run -p 80:80 ngnix: permite acessar da maquina local na porta 80 e redirecionar para porta 80 do container
+	- docker run --name nome_container -p 80:80 -d nginx: permite acessar da maquina local na porta 80 e redirecionar para porta 80 do container
+	- docker run --name nome_container -p 80:80 -v $(pwd)/html:/usr/share/ngnix/html nginx: permite acessar da maquina local na porta 80 e redirecionar para porta 80 do container e cria um volume a partir da pasta atual $(pwd)/caminho do container
+	- docker run --name nome_container -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.7: permite subir um container mysql
+	- docker run -p 80:80 lemello091085/nginx_test: permite acessar o container criado
+	- docker run --rm hello-world: remove o container depois de criado	
+	- docker stop id_container: permite parar o container	
+	- docker start id_container: permite inicializar o container	
+	- docker exec -it nome_container /bin/bash: permite executar um comando no container	
+	- docker build -t usuario_docker_hub/nome_do_conatiner_criado:latest .: permite fazer o build da nossa aplicação no docker para se tornar uma imagem
+	- docker login: permite fazer login no docker hub	
+	- docker push lemello091085/nginx_test:latest: permite subir as modificações da minha imagem
+	- docker-compose up: permite rodar e subir todos os serviços
+	- docker-compose ps: permite mostrar só os serviços do docker-compose
+#################################################################################################################################################################
+	- comando linux: uname -a: permite verificar qual o sistema operacional esta rodando pela linha de comando
+	- comando linux: apt-get update: permite atualizar o ubuntu
+	- comando linux: apt install vim: permite instalar o vim
+	- comando linux: apt install curl: permite instalar o curl
+	- comando linux: curl http://nome_container: permite acessar o container nginx
+	- comando linux: cat nome_arquivo: permite ver todo o conteudo do arquivo
+	- comando linux: mv nome_arquivo nome_arquivo_1: permite fazer uma copia do arquivo original(index.html) para o arquivo criado (index.html_)
+	- comando linux: echo "<h2>Ola mundo</h2>" > index.html: permite escrever no arquivo original index.html, pois foi feito uma copia no arquivo index.html_
+#################################################################################################################################################################
+	
