@@ -1,23 +1,27 @@
-O que é um container?
+Containers Docker
+    - Docker é um projeto de código aberto que faz a auto implantação de aplicativos dentro de contêineres e é mantido pela empresa Docker, Inc.
+    - Docker faz a virtualização da virtualização, ou seja, tenho uma máquina virtual e dentro desta máquina virtual fatio ela em pedaços menores onde vou compartilhar o kernel do linux, memoria, cpu e este vai ser meu conteiner e tem uma camada de isolamento, onde rodamos aplicações isoladamente, conteiner é projetado para morrer.
+    - Docker fornece uma camada individual de abstração, de automação da virtualização em nível operacional, utilizando recursos de isolamento do kernel do linux, como cgroups e namespaces, e um sistema de arquivos union mounting como padrão o OverlayFS dando possibilidade ao uso de outros sistema de arquivos. 
 
-- Mais leve
-- Não tem os custos de manter múltiplos Sistemas Operacionais
-- Mais rápido de subir
+O que é um container?
+    - Mais leve
+    - Não tem os custos de manter múltiplos Sistemas Operacionais
+    - Mais rápido de subir
 
 Mas por que precisamos deles?
 
 Os problemas desta abordagem:
-- Dois apps utilizando a mesma porta de rede?
-- E se um app começar a consumir muito de um recurso, como a CPU?
-- E se cada app precisar de uma versão especifica de uma linguagem?
+    - Dois apps utilizando a mesma porta de rede?
+    - E se um app começar a consumir muito de um recurso, como a CPU?
+    - E se cada app precisar de uma versão especifica de uma linguagem?
 
 Utilizando containers
 
 Ganhamos:
-- Melhor controle sobre o uso de cada recurso( CPU, Disco, Rede, etc...)
-- Agilidade na hora de criar ou remover um container
-- Maior facilidade na hora de trabalhar com diferentes versões de linguagens e bibliotecas
-- Mais leves que as VM
+    - Melhor controle sobre o uso de cada recurso( CPU, Disco, Rede, etc...)
+    - Agilidade na hora de criar ou remover um container
+    - Maior facilidade na hora de trabalhar com diferentes versões de linguagens e bibliotecas
+    - Mais leves que as VM
 
 O que é o Docker?
 
